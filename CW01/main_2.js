@@ -49,14 +49,19 @@ console.log(lname3, ':Прізвище');
 document.write('3. ' + y3 + ' років' + ' ' + fname3 + ' ' + lname3);
 document.write("<br>");
 
-var ysum = y1+y2+y3;
+
+var res1 = parseInt(y1);
+var res2 = parseInt(y2);
+var res3 = parseInt(y3);
+
+var ysum = res1+res2+res3;
 
 var ymid = ysum/3;
 
-document.write(ysum);
+/*document.write(ysum);
 document.write("<br>");
 document.write(ymid);
-document.write("<br>");
+document.write("<br>");*/
 
 
 

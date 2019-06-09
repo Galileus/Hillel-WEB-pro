@@ -1,21 +1,43 @@
-/*
-Lection 1 - JavaScript Intro
+alert('Я - твій домашка!!!');
 
-  1. JS Введение
-  2. Подключение скриптов
-  3. Консоль разработчика
-  4. Переменные + типы(String, Number),  NaN,
-  5. Именование переменных
-  6. Operators
-*/
+var F; // straight
 
-/*
-  # 1. JS Введение
-   * LiveScript - JavaScript;
-   * JavaScript — это язык программирования, который даёт возможность реализовывать сложное 
-     поведение веб-страницы. Является интерпретируемым языком.
-   * Интерпретация – это когда исходный код программы получает другой инструмент, который называют «интерпретатор», 
-     выполняет его «как есть». При этом распространяется именно сам исходный код (скрипт). 
-     Этот подход применяется в браузерах для JavaScript. 
-*/
+var m; // weight
+
+var a; // acceleration
+
+document.write('**********************************');
+document.write("<br>");
+
+var F = prompt('Enter value for F');
+
+console.log(F, 'straight');
+document.write(F, ': straight (F)');
+document.write("<br>");
+
+var m = prompt('Enter value for m');
+console.log(m, 'weight');
+document.write(m, ': weight (m)');
+document.write("<br>");
+
+
+
+document.write('--------------------------------');
+document.write("<br>");
+
+a = F/m // формула для прискорення
+
+console.log(a, 'acceleration');
+document.write(a, ': acceleration (a)');
+document.write("<br>");
+
+
+
+document.write('----------------------------------');
+
+
+
+
+
+
 

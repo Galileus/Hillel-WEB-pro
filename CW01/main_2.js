@@ -1,59 +1,74 @@
- y1 = 0;  fname1 = 0;  lname1 = 0;
-
-
-alert('Введіть особисті дані');
-
- y1 = prompt('Ваш вік');
- fname1 = prompt('Ім*я');
- lname1 = prompt('Прізвище');
-
-console.log(y1, ':вік');
-console.log(fname1, ':Ім*я');
-console.log(lname1, ':Прізвище');
-
 document.write('**********************************');
 document.write("<br>");
 
-document.write('1. ' + y1 + ' років' + ' ' + fname1 + ' ' + lname1);
-document.write("<br>");
+// Перший студент
 
 alert('Введіть особисті дані');
 
- y1 = prompt('Ваш вік');
- fname1 = prompt('Ім*я');
- lname1 = prompt('Прізвище');
+ y = prompt('Ваш вік');
+ fname = prompt('Ім*я');
+ lname = prompt('Прізвище');
 
-console.log(y1, ':вік');
-console.log(fname1, ':Ім*я');
-console.log(lname1, ':Прізвище');
+console.log('---Перший студент---');
+console.log(y, ':вік');
+console.log(fname, ':Ім*я');
+console.log(lname, ':Прізвище');
 
-
-document.write('2. ' + y1 + ' років' + ' ' + fname1 + ' ' + lname1);
+document.write('1. ' + y + ' років' + ' ' + fname + ' ' + lname);
 document.write("<br>");
+
+personOne = y + fname + lname;
+personOne = parseInt(personOne);
+
+// Другий студент
 
 alert('Введіть особисті дані');
 
- y1 = prompt('Ваш вік');
- fname1 = prompt('Ім*я');
- lname1 = prompt('Прізвище');
+ y = prompt('Ваш вік');
+ fname = prompt('Ім*я');
+ lname = prompt('Прізвище');
 
-console.log(y1, ':вік');
-console.log(fname1, ':Ім*я');
-console.log(lname1, ':Прізвище');
+console.log('---Другий студент---');
+console.log(y, ':вік');
+console.log(fname, ':Ім*я');
+console.log(lname, ':Прізвище');
 
 
-document.write('3. ' + y1 + ' років' + ' ' + fname1 + ' ' + lname1);
+document.write('2. ' + y + ' років' + ' ' + fname + ' ' + lname);
 document.write("<br>");
 
-
-/* res1 = parseInt(y1);
- res2 = parseInt(y2);
- res3 = parseInt(y3);
-
- ymid = (res1+res2+res3)/3; */
+personTwo = y + fname + lname;
+personTwo = parseInt(personTwo);
 
 
-document.write('------------' + 'middle age of students:' + ymid + '-----------');
+// Третій студент
+
+alert('Введіть особисті дані');
+
+ y = prompt('Ваш вік');
+ fname = prompt('Ім*я');
+ lname = prompt('Прізвище');
+
+console.log('---Третій студент---');
+console.log(y, ':вік');
+console.log(fname, ':Ім*я');
+console.log(lname, ':Прізвище');
+
+
+document.write('3. ' + y + ' років' + ' ' + fname + ' ' + lname);
+document.write("<br>");
+
+personThree = y + fname + lname;
+personThree = parseInt(personThree);
+
+// Середній вік
+
+personOne = (personOne + personTwo + personThree)/3;
+
+console.log('---середній вік---');
+console.log(personOne, ': вік');
+
+document.write('------------' + 'середній вік студентів:' + personOne + '-----------');
 document.write("<br>");
 
 document.write('**********************************');

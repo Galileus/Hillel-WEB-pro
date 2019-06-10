@@ -1,10 +1,10 @@
 alert('Я - твій домашка!!!');
 
-var F; // straight
+F = 0; // straight
 
-var m; // weight
+m = 0; // weight
 
-var a; // acceleration
+a = 0; // acceleration
 
 document.write('**********************************');
 document.write("<br>");

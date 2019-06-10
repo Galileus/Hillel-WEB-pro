@@ -1,15 +1,11 @@
-alert('Став зразу 10, там все норм паше!!!');
-
-var y1; var fname1; var lname1;
-var y2; var fname2; var lname2;
-var y3; var fname3; var lname3;
+ y1 = 0;  fname1 = 0;  lname1 = 0;
 
 
 alert('Введіть особисті дані');
 
-var y1 = prompt('Ваш вік');
-var fname1 = prompt('Ім*я');
-var lname1 = prompt('Прізвище');
+ y1 = prompt('Ваш вік');
+ fname1 = prompt('Ім*я');
+ lname1 = prompt('Прізвище');
 
 console.log(y1, ':вік');
 console.log(fname1, ':Ім*я');
@@ -23,46 +19,38 @@ document.write("<br>");
 
 alert('Введіть особисті дані');
 
-var y2 = prompt('Ваш вік');
-var fname2 = prompt('Ім*я');
-var lname2 = prompt('Прізвище');
+ y1 = prompt('Ваш вік');
+ fname1 = prompt('Ім*я');
+ lname1 = prompt('Прізвище');
 
-console.log(y2, ':вік');
-console.log(fname2, ':Ім*я');
-console.log(lname2, ':Прізвище');
+console.log(y1, ':вік');
+console.log(fname1, ':Ім*я');
+console.log(lname1, ':Прізвище');
 
 
-document.write('2. ' + y2 + ' років' + ' ' + fname2 + ' ' + lname2);
+document.write('2. ' + y1 + ' років' + ' ' + fname1 + ' ' + lname1);
 document.write("<br>");
 
 alert('Введіть особисті дані');
 
-var y3 = prompt('Ваш вік');
-var fname3 = prompt('Ім*я');
-var lname3 = prompt('Прізвище');
+ y1 = prompt('Ваш вік');
+ fname1 = prompt('Ім*я');
+ lname1 = prompt('Прізвище');
 
-console.log(y3, ':вік');
-console.log(fname3, ':Ім*я');
-console.log(lname3, ':Прізвище');
+console.log(y1, ':вік');
+console.log(fname1, ':Ім*я');
+console.log(lname1, ':Прізвище');
 
 
-document.write('3. ' + y3 + ' років' + ' ' + fname3 + ' ' + lname3);
+document.write('3. ' + y1 + ' років' + ' ' + fname1 + ' ' + lname1);
 document.write("<br>");
 
 
-var res1 = parseInt(y1);
-var res2 = parseInt(y2);
-var res3 = parseInt(y3);
+/* res1 = parseInt(y1);
+ res2 = parseInt(y2);
+ res3 = parseInt(y3);
 
-var ysum = res1+res2+res3;
-
-var ymid = ysum/3;
-
-/*document.write(ysum);
-document.write("<br>");
-document.write(ymid);
-document.write("<br>");*/
-
+ ymid = (res1+res2+res3)/3; */
 
 
 document.write('------------' + 'middle age of students:' + ymid + '-----------');

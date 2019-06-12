@@ -1,15 +1,36 @@
- 
+alert ('Begin');
 
- login = prompt('homewowk status');
+who = prompt ('Who are you?')
 
+if (who) {	
 
+	if ( who === 'admin') {
 
- if (login) {
-     console.log('done');
-     document.write('done');
+		alert ('Admin is here!!!');		
+		pass = prompt ('Enter password')
 
+		if (pass) {
 
- } else {
-     console.log('redo');
- }
+			if (pass === 'Black Lord') {
+			alert ('Welcome again, my Lord !!!')
 
+			}
+
+			else {
+				alert ('Wrong pass');
+			}
+		}
+
+		else {
+			alert ('Access denied');
+		}
+	}
+
+	else {
+		alert ('I don`t know you');
+	}
+}
+
+else {
+	alert ('Access denied');
+}

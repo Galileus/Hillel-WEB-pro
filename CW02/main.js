@@ -20,6 +20,7 @@
 
 // console.log(typeof personAge, 'personAge');
 
+
 // nan = 'asdasd123123';
 
 // console.log(isNaN(nan), 'isNaN');
@@ -40,6 +41,7 @@ console.log(a >= b, 'a >= b');
 console.log(a <= b, 'a <= b');
 
 a = '12', b = 12;
+
 console.log(a == b, 'a == b')
 
 console.log(a === b, 'a === b');
@@ -127,3 +129,4 @@ document.write('1. ' + personOne);
 
 
 console.log(parseInt(personOne))
+

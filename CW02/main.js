@@ -91,6 +91,7 @@ console.log(a === b, 'a === b');
  console.log(!!'213');
 
  //------ loop
+
 i = 1;
 document.write('Список:' );
 document.write('<br />');
@@ -112,6 +113,7 @@ console.log(i, )
  }
 
 // from = +prompt('from');
+
 to = +prompt('to');
 sum = 0;
 

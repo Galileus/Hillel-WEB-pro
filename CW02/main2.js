@@ -1,19 +1,27 @@
-i = 1;
+n = prompt ('Скільки чисел перебрати ?');
 
-document.write('Перебір чисел 1 - 150' );
+document.write('Перебір чисел:' );
 document.write('<br />');
+
+i = 1;
 
 do {
     document.write('<div>' + i + '</div>' );
     document.write('<br />');
     i++;
-} while(i <= 150);
+} while(i <= n);
 
-sum = 0; 
+// --------------------------------------------
 
-	for (var i = 0; i <= 150; i++)
-	 {
-		if (i % 2 == 0) sum +=i
-	}
+sum = 0;
 
-document.write(sum);
+ for (i = 1; i <= n; i++) {
+ 	if (i % 2 == 0)
+    sum  = sum + i;
+ }
+
+ console.log(sum, 'sum');
+
+
+ document.write(sum, ' :сума парних чисел');
+ document.write('<br>');

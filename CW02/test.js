@@ -1,11 +1,9 @@
 alert ('Begin');
-
 who = prompt ('Who are you?')
 
-if (who) {	
+if (who) {
 
 	if ( who === 'admin') {
-
 		alert ('Admin is here!!!');		
 		pass = prompt ('Enter password')
 
@@ -14,23 +12,18 @@ if (who) {
 			if (pass === 'Black Lord') {
 			alert ('Welcome again, my Lord !!!')
 
-			}
-
-			else {
+			}else {
 				alert ('Wrong pass');
 			}
-		}
 
-		else {
+		}else {
 			alert ('Access denied');
 		}
-	}
 
-	else {
+	}else {
 		alert ('I don`t know you');
 	}
-}
 
-else {
+}else {
 	alert ('Access denied');
 }

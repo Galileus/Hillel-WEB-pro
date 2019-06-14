@@ -1,27 +1,47 @@
-n = prompt ('Скільки чисел перебрати ?');
+/*who = prompt('who r u?');
 
-document.write('Перебір чисел:' );
-document.write('<br />');
+if(who == 'admin'){
 
-i = 1;
+	pass = prompt ('enter your pass')
+	if (pass == 'Blackbird') {
+	document.write('Hello, my Lord');	
 
-do {
-    document.write('<div>' + i + '</div>' );
-    document.write('<br />');
-    i++;
-} while(i <= n);
+	}else if (pass == null){
+		alert ('access denied')
 
-// --------------------------------------------
+	}else {
+		alert ('wrong pass')
+	}
 
-sum = 0;
+}else if (who == null){
+	alert ('access denied')
 
- for (i = 1; i <= n; i++) {
- 	if (i % 2 == 0)
-    sum  = sum + i;
- }
-
- console.log(sum, 'sum');
+}else {
+	alert ('i dont know u')
+}*/
 
 
- document.write(sum, ' :сума парних чисел');
- document.write('<br>');
+//---------------------------------------
+
+/*do {
+	n = +prompt('enter a number');
+	nan = !isNaN(n)
+	console.log(nan);
+}
+while (nan == false);
+	document.write(n, ' is a number!!!');*/
+
+//---------------------------------------
+
+/*
+n = +prompt('enter a number');
+
+for (s = 0, i = 1; i <= n; i++) {
+	console.log(i);
+	if ( i % 2 == 0)
+		s = s + i;	
+}
+
+console.log(s);*/
+
+//---------------------------------------

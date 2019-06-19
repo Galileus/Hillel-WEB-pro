@@ -33,7 +33,7 @@ while (nan == false);
 
 //---------------------------------------
 
-/*
+
 n = +prompt('enter a number');
 
 for (s = 0, i = 1; i <= n; i++) {
@@ -42,6 +42,6 @@ for (s = 0, i = 1; i <= n; i++) {
 		s = s + i;	
 }
 
-console.log(s);*/
+console.log(s, 'sum');
 
 //---------------------------------------

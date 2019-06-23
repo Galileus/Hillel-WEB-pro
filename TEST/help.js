@@ -15,21 +15,29 @@ document.write('Список:' );
 document.write('<br />');
 
 
-if (age >= 18 || age <= 30) {
+if (age >= 18 || age <= 30) { //або 
  console.log('watching');
 } else {
  console.log('walk');
 }
 
 
- do {
-    document.write('<div>' + i + '</div>' );
-    // i += 1;
-    // i = i + 1
-    i++;
-    // console.log(i, 'i')
-    // ++i;
- } while(i < 10)
+i = +prompt('from');
+t = +prompt('to');
+
+document.write('Список:' );
+document.write('<br />');
+
+do {
+	document.write('<div>' + i + '</div>' );
+	i++;
+} while(i < t)
+
+
+while(i <= t){     
+	console.log('To DO' + i);
+	i++;
+}
 
 
 for (i = 1; i <=10; i++) {

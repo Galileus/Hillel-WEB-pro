@@ -35,7 +35,7 @@ console.log(mass, 'mass');*/
 
 //--------------3--------------------
 
-/*n = +prompt('розмір масиву');
+n = +prompt('розмір масиву');
 
 alert('рендомне заповнення масива від a ДО b');
 a = +prompt('min number');
@@ -49,7 +49,7 @@ for(i = 0 ; i < mass.length; i++){
 console.log(mass, 'mass');
 
 min = mass[0];
-max = min;
+max = mass[0];
 
 for (i = 0; i < mass.length; i++){
 	if(mass[i] > max ){
@@ -63,21 +63,20 @@ for (i = 0; i < mass.length; i++){
 console.log(max, 'max');
 console.log(min, 'min');
 
-m = n-2;
-massnew = new Array (m);
+massnew = mass.slice(1, mass.length -2);
 
 console.log(massnew, 'massnew');
 
 for(i = 0; i < mass.length; i++){
-	if(mass[i] === max || mass[i] === min ){
+	if(mass[i] == max || mass[i] == min ){
 		console.log(mass[i], 'nok');
 	} else {
 		console.log(mass[i], 'ok');
-		massnew[i] = mass[i];
+		massnew[massnew.length] = mass[i];
 	}
 }
 
-console.log(massnew, 'massnew');*/
+console.log(massnew, 'massnew');
 
 //--------------4-------------------
 
@@ -85,10 +84,12 @@ console.log(massnew, 'massnew');*/
 
 massnew = new Array();
 
-for (i = mass.length - 1; i >= 0; i-- ){
-	console.log(mass[i], 'mass');
-	massnew.push(mass[i]);
-}
+temp = 0;
 
-console.log(mass, 'mass');
-console.log(massnew, 'massnew');*/
+for(i=0,j = arr.length - 1; i < j; i++ , j--)
+{
+    temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+}
+console.log(arr, 'arr');

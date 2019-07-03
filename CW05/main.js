@@ -26,31 +26,30 @@ mass = new Array (a);
 summass = new Array ();
 temp = new Array ();
 
+// генерація двомірного масиву
+
 for (i = 0; i < mass.length; i++){
- mass[i] = new Array(b);
+   mass[i] = new Array(b);
 
- for (j = 0; j < mass[i].length; j++){
-  mass[i][j] = Math.floor(Math.random() * 10 + 0 - 0);
-
- }
-
+   for (j = 0; j < mass[i].length; j++){
+   mass[i][j] = Math.floor(Math.random() * 10 + 0 - 0);
+   } 
 }
-console.log(mass, 'mass');
+console.log(mass, 'mass'); // двомірний масив
+
+// вичислення суми чисел вторинних масивів
 
 for (i = 0, sum = 0; i < mass.length; i++){
- 
+   for (j = 0; j < mass[i].length; j++){
+   sum = sum + mass[i][j];  
+   }
 
-
-  for (j = 0; j < mass[i].length; j++){
-  sum = sum + mass[i][j];  
- }
- 
- console.log(sum, 'sum');
-
-summass[summass.length] = sum;
+   /*console.log(sum,'sum');*/ // сума чисел в кожномук масиві
+   summass[summass.length] = sum; // запис сум в новий масив
 }
+console.log(summass, 'summass'); // новий масив із сумами
 
-console.log(summass, 'summass');
+// вичислення  мінімального та макс суми чисел вторинних масивів та індексів
 
 summax = summass[0];
 summin = summass[0];
@@ -59,6 +58,7 @@ summaxi = 0
 summini = 0
 
 for (k = 1; k < summass.length; k++){
+
   if (summass[k] > summax ){
     summax = summass[k];
     summaxi = k;
@@ -74,15 +74,14 @@ console.log(summini, 'summin index');
 
 
 console.log(summax, 'summax');
-console.log(summaxi, 'summin index');
+console.log(summaxi, 'summax index');
 
-/*console.log(mass[summini], 'mass summini');*/
+// замінити рядок з summin  на summax 
 
 temp = mass[summini];
 
+mass[summini] = mass[summaxi];
+
 mass[summaxi] = temp;
 
-console.log(temp, 'temp');
-console.log(mass, 'mass');
-
-
+console.log(mass, 'mass'); // двомірний масив

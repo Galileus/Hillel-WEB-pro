@@ -1,6 +1,6 @@
 //--------------1--------------------
 
-n = +prompt('розмір масиву');
+/*n = +prompt('розмір масиву');
 
 mass = new Array(n);
 
@@ -15,23 +15,22 @@ for(i = 0; i < mass.length; i++) {
  }
 }
 console.log(mass, 'mass');
-
+*/
 
 //--------------2--------------------
 
-/*n = +prompt('розмір масиву');
+mass = new Array(3);
 
-mass = new Array(n);
+for(i = 0, n = 0; i < mass.length; i++){
+  do {
+   n = +prompt('enter a number');
+   nan = !isNaN(n)
+  }while (nan == false);
 
-for (i = 0 ; i < mass.length; i++){
- mass[i] = +prompt('Введи число');
- if (!mass[i] || mass[i] < 0){
-  mass[i] = +prompt('Введи число знов');
- }
- 
+  mass[i] = n;
+  console.log(n, 'n');    
 }
-console.log(mass, 'mass');*/
-
+console.log(mass, 'mass');
 
 //--------------3--------------------
 

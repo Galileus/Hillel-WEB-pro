@@ -87,22 +87,24 @@ console.log(a, 'result')
 doMath(1, 2);*/
 
 
+
+act = prompt('enter action');
+
 function sum (a, b) {
 
-  res = a + b;
-  bes = a - b;
-if(act === '+'){
-  return res;
-}else {
-  return bes;
+  if(act === '+'){
+    return a + b;
+  }else if (act === '-') {
+    return a - b;
+  }
 }
+sum (4,2);
 
-}
+console.log(act);
+
+console.log(sum(4,2));
 
 
-act = +prompt('enter action');
 
 
-resSum = sum(1, 2);
-
-console.log(resSum, 'resSum');
+/*console.log(sum(1, 2), 'resSum');*/

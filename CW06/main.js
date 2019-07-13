@@ -55,39 +55,10 @@ function compare (suma, sumb) {
 compare (suma, sumb);
 */
 
+
+
 //--------------3--------------------
-
-/*x = +prompt('enter x');
-act = +prompt('enter action');
-y = +prompt('enter x');
-
-
-a = x + y ;
-b = x - y;
-c = x * y;
-d = x / y;
-e = x % y;
-f = x ^ y;
-
-if (act === '+') {
-  return '123'
-  console.log(a, 'result');
-}
-
-/*console.log(a, 'result');*/
-
-
-
-/*function doMath(x, act, y){
-
-
-console.log(a, 'result')
-}
-
-doMath(1, 2);*/
-
-
-
+/*
 act = prompt('enter action');
 
 function sum (a, b) {
@@ -96,15 +67,41 @@ function sum (a, b) {
     return a + b;
   }else if (act === '-') {
     return a - b;
+  }else if (act === '*') {
+    return a * b;
+  }else if (act === '/') {
+    return a / b;
+  }else if (act === '%') {
+    return a % b;
+  }else if (act === '^') {
+    return a ^ b;
   }
 }
 sum (4,2);
+console.log(sum(4,2));*/
 
-console.log(act);
-
-console.log(sum(4,2));
-
+//--------------4--------------------
 
 
+/*function contain (str, elem) {
 
-/*console.log(sum(1, 2), 'resSum');*/
+var mas = [];
+
+str = arguments[0];
+for (var i = 0; i < str.length; i++){
+
+  if (elem.indexOf(str[i]) != -1){
+    
+  }else{
+    mas.push(str[i]);
+  }
+
+}
+var mas = mas.join('');
+console.log(str);
+console.log(mas);
+
+}
+contain ('hello world', ['l', 'd']);*/
+
+//--------------5--------------------

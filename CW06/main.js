@@ -105,3 +105,27 @@ console.log(mas);
 contain ('hello world', ['l', 'd']);*/
 
 //--------------5--------------------
+
+
+var input = [1, 2, 3, 4, 5, 6];
+
+function isEven(x) {
+return x % 2 == 0; 
+}
+
+function filter () {
+
+  var mass = [];
+
+for (var i = 0; i < input.length; i++){
+  if(input[i] % 2 == 0){
+    mass.push(input[i]);
+  }
+}
+
+console.log(mass, 'mass');
+}
+
+filter ();
+
+/*console.log(filter(input, isEven)); // [2, 4, 6]*/

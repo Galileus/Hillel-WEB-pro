@@ -55,8 +55,6 @@ function compare (suma, sumb) {
 compare (suma, sumb);
 */
 
-
-
 //--------------3--------------------
 /*
 act = prompt('enter action');
@@ -82,54 +80,17 @@ console.log(sum(4,2));*/
 
 //--------------4--------------------
 
-
-/*function contain (str, elem) {
-
-var mas = [];
-
-str = arguments[0];
-for (var i = 0; i < str.length; i++){
-
-  if (elem.indexOf(str[i]) != -1){
-    
-  }else{
-    mas.push(str[i]);
-  }
-
-}
-var mas = mas.join('');
-console.log(str);
-console.log(mas);
-
-}
-contain ('hello world', ['l', 'd']);*/
-
-//--------------5--------------------
+function del () {
 
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-//---------
-
-function isEven(x) {
-return x % 2 == 0; 
 }
 
 
-//-------------
-
-function filter (arr, func) {
-var mass = [];
-
-for (i = 0; i < arr.length; i++){
-  if(func(arr[i]) == true){
-    mass.push(arr[i]);
-  }
-
-}
+mass = new Array('hello', 'world');
 console.log(mass, 'mass');
-}
-filter (arr, isEven);
 
+mass.splice(1,1);
 
+console.log(mass, 'mass');
 
+del();

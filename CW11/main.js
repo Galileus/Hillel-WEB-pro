@@ -11,3 +11,4 @@ $ git add ./
 
 $ git commit -m 'initial project version'
 
+git checkout -b name - нова гілка

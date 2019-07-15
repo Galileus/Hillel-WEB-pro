@@ -59,9 +59,8 @@ compare (suma, sumb);
 
 //--------------3--------------------
 /*
-act = prompt('enter action');
 
-function sum (a, b) {
+function sum (a, b, act) {
 
   if(act === '+'){
     return a + b;
@@ -77,8 +76,8 @@ function sum (a, b) {
     return a ^ b;
   }
 }
-sum (4,2);
-console.log(sum(4,2));*/
+
+console.log(sum(4, 2, '-'));*/
 
 //--------------4--------------------
 

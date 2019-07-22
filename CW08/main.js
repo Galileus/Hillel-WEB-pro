@@ -1,49 +1,65 @@
 //--------------1--------------------
+/*
+function inArray (text, arr){
+	for (i = 0; i < arr.length; i++){
+		  if (arr[i].indexOf(text) != -1){
 
-/*function inArray (text, arr, func){
-
-for (var i = 0; i < arr.length ; i++) {
-    if (arr[i].indexOf(text) != -1){    
-    }
-  }
-return true;
+		  }  			
+	}
+	return true;
 }
-console.log(inArray ('hello', ['ghdg', 'hello', 'dfgndfg']));
-*/
+console.log(inArray('hello', ['svnj', 'hello', 'cvpoq']));*/
 
+//--------------2--------------------
 
+/*
+function assignObjects(flag){
+newobj = {};
+for(i = 0; i < arguments.length; i++ ){
+	for (key in arguments[i]){
+		if( flag == true && key in newobj ){
+			continue;
+		}else{
+			newobj[key] = arguments[i][key]
+		}
+	}
 
-/*var hotel = {
-
-  'name' : 'Home',
-  'status' : 'operational', 
-  'stars' : 3, 
-  'adv' : function (){
-    console.log(this.name + ' - The best hotel,' + this.stars + ' stars');
-  },
-
-  'hi' : 'hello',
-  'how much' : 500 
+}
+return newobj;
 
 };
 
-console.log(hotel.hi);
-hotel.adv();
+assignObjects({ x: 20, z: 30 },{ x: 23, p: 13 }, true);
 
-var a = {};
+console.log(assignObjects(true, { x: 20, z: 30 },{ x: 23, p: 13 }));*/
 
-a.hi = 'test';
-a.text = 'new text';
-a.func = function(){
-  console.log('hello jerk')
+
+//--------------3--------------------
+
+
+/*massname = ['George', 'Max', 'John', 'Jack', 'Craig'];
+
+mass = [];
+
+function getPerson(name,min, max){
+obj = {};
+obj.name = name;
+obj.age = Math.ceil(Math.random() * (max - min)+ min);
+return obj;
 }
 
-console.log(a);
-console.log(a.hi);
-a.func();
-console.log(a['hi']);
-console.log(hotel);
+for (i = 0; i < 5; i ++){
+	mass.push(getPerson(randname(massname), 17, 28))
+}
 
-var b = 'how much';
 
-console.log(hotel[b]);*/
+function randname (arr){
+
+return arr[Math.ceil(Math.random() * (arr.length - 1))];
+}
+
+randname(massname);
+
+console.log(randname(massname));
+
+console.log(mass, 'person list')*/

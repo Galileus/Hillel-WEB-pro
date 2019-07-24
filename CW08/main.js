@@ -63,3 +63,83 @@ randname(massname);
 console.log(randname(massname));
 
 console.log(mass, 'person list')*/
+
+
+//--------------test--------------------
+
+/*function rand (){
+	var rend = Math.ceil(Math.random() * (10 - 0)+ 0);
+	return rend;
+}	
+
+console.log(rand());
+
+mass = new Array (new Array(new Array(12), new Array(5)), new Array(15), new Array(new Array(5), new Array(5)));
+
+
+function isArray (mass){
+	for (var i = 0; i < mass.length; i++){
+		if(mass[i] && mass[i].pop){
+			isArray(mass[i]);
+		}else {
+			mass[i] = rand();
+		}
+	}
+}
+
+isArray(mass);
+
+console.log(mass, 'new mass');
+*/
+
+//--------------test2--------------------
+
+function Human (name){
+
+  this.speed = 0;
+  this.name = name;
+
+  this.run = function(speed) {
+    this.speed += speed;
+    alert( this.name + ' бежит, скорость ' + this.speed );
+  };
+
+  this.stop = function() {
+    this.speed = 0;
+    alert( this.name + ' стоит' );
+  };
+
+}
+
+/*
+// конструктор
+function Animal(name) {
+  this.name = name;
+  this.speed = 0;
+}
+
+// методы в прототипе
+Animal.prototype.run = function(speed) {
+  this.speed += speed;
+  alert( this.name + ' бежит, скорость ' + this.speed );
+};
+
+Animal.prototype.stop = function() {
+  this.speed = 0;
+  alert( this.name + ' стоит' );
+};
+
+var animal = new Animal('Зверь');
+
+alert( animal.speed ); // 0, свойство взято из прототипа
+animal.run(5); // Зверь бежит, скорость 5
+animal.run(5); // Зверь бежит, скорость 10
+animal.stop(); // Зверь стоит*/
+
+
+//--------------test2--------------------
+
+
+
+
+

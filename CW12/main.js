@@ -1,14 +1,27 @@
 //--------------1--------------------
 
-git init - створити локальний репозит
+obj = { X:12, Y:3, znak: '+'}
 
-cd ../ - крок назад
+function SuperMath (){
 
-cd./new folder - крок впередcd./new folder - крок впередcd./new folder - крок вперед
+}
 
+SuperMath.prototype.check = function (obj) {
+	var act = confirm ('Wanna make an action with sumbol' + ' ' + obj['znak'] + ' ' +'?' );
+	if(act == true && obj['znak'] == '+' ){
+		alert('lets do it!')
+		return obj.X + obj.Y
+	}else {
+		return res.input();		 
+	}
+};
 
-$ git add ./
+SuperMath.prototype.input = function (X, Y, znak) {
+	var X = prompt('enter a number');
+	var Y = prompt('enter a number');
+	var znak = prompt('enter Math sumbol (+ - / *)');	
+};
 
-$ git commit -m 'initial project version'
+var res = new SuperMath ();
 
-git checkout -b name - нова гілка
+res.check(obj);

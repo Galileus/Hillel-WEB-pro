@@ -54,7 +54,7 @@ console.log(res.check(obj));
 */
 
 
-function Human(name, age) {
+/*function Human(name, age) {
 
 this.name = name;
 this.age = age;
@@ -64,12 +64,49 @@ this.run = function(speed){
 	alert(this.name + 'is running' + 'speed' + speed)
 };
 
+};
 
+var personOne = new Human ('Valera', 25);
+console.log(personOne);
+personOne.run(5);
+*/
+
+
+
+function SuperArray (n, m, obj) {
+	this.mass = new Array(n);
+
+	this.randmass = function(){
+		for (i = 0; i < n; i++) {
+	   		this.mass[i] = new Array(m);
+
+		   for (j = 0; j < this.mass[i].length; j++) {
+		   		this.mass[i][j] = Math.floor(Math.random() * (obj.max + obj.min) - obj.min);
+		   }
+
+	};
+
+	this.render = function(){
+		for (var i = 0 ; i < n; i++){
+			var item = this.mass[i];
+			for(var j = 0; j < item.length; j++){
+				var foo = item[j]
+				document.write(foo);
+			}document.write(<br>);
+			
+		}
+	
+	}
+
+};
 
 }
 
-var personOne = new Human ('Valera', 25);
+var foo = new SuperArray (5, 5, {min: 10, max: 55});
 
-console.log(personOne);
+console.log(foo.randmass());
 
-personOne.run(5)
+console.log(foo);
+
+
+foo.render();

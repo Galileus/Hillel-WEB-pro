@@ -63,3 +63,32 @@ randname(massname);
 console.log(randname(massname));
 
 console.log(mass, 'person list')*/
+
+
+
+//--------------4--------------------
+/*
+function rand (){
+var rand = Math.ceil(Math.random() * (10 - 0)+ 0);
+return rand	;
+}
+console.log(rand());
+
+
+arrray = new Array(new Array(5), new Array(5), new Array(new Array(5), new Array(5)));
+
+function arrayFill (arr) {
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] && arr[i].pop) {
+            arrayFill(arr[i]);
+        } else {
+            arr[i] = rand();
+        }
+    }
+}
+
+arrayFill(arrray);
+
+console.log(arrray, 'arrray')
+*/
+

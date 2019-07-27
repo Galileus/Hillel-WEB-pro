@@ -53,23 +53,3 @@ var res = new SuperMath (obj);
 console.log(res.check(obj));
 */
 
-
-function Human(name, age) {
-
-this.name = name;
-this.age = age;
-this.speed
-
-this.run = function(speed){
-	alert(this.name + 'is running' + 'speed' + speed)
-};
-
-
-
-}
-
-var personOne = new Human ('Valera', 25);
-
-console.log(personOne);
-
-personOne.run(5)

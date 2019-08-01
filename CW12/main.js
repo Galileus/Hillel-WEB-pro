@@ -1,6 +1,6 @@
 //--------------1--------------------
 
-/*obj = { X:12, Y:3, znak:'+'};
+obj = { X:12, Y:3, znak:'+'};
 
 // constructor
 
@@ -51,5 +51,5 @@ SuperMath.prototype.math = function(obj){
 var res = new SuperMath (obj);
 
 console.log(res.check(obj));
-*/
+
 

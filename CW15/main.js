@@ -58,11 +58,13 @@ function send (){
 
   i=0;
 
-  var str = document.getElementsByTagName('input')[0].value;
+  var strOne = document.getElementsByTagName('input')[0].value;
+
+  var srtTwo = document.getElementById('two')
 
   textarea = document.getElementsByTagName('textarea')[0];
 
-  textarea.value = str;
+  textarea.value = strOne;
 
   console.log(str);
 

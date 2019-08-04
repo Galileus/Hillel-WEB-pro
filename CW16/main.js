@@ -1,18 +1,22 @@
+window.onload = function(){
+    var box = document.querySelector('.box');
 
-window.onload = function (){
+    box.addEventListener('click', function() {
+        box.classList.toggle('active');
+        
+    }); 
 
-  var forms = document.querySelectorAll('.form');
+    document.addEventListener('click', function(e) {
+      console.log(e.clientY, 'clientY');
+      console.log(e.clientX, 'clientX');
 
-  textarea = document.getElementsByTagName('textarea')[0];   
-  
-  console.dir(forms);
 
-  setInterval(function(){
+      box.style.left = e.clientY + 'px';
+      box.style.top = e.clientX + 'px';
 
-    for (var i = 0, str = ''; i < forms.length; i++) {
-      str += forms[i].value
-    }
-
-    textarea.value = str;
     
-  }, 1000);}
+
+    });
+
+
+  }

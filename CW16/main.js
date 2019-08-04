@@ -1,21 +1,18 @@
 
+window.onload = function (){
 
-window.onload = function(){
-    var box = document.querySelector('.box');
+  var forms = document.querySelectorAll('.form');
 
-    box.addEventListener('click', function(event) {
-        box.classList.toggle('active');
-        //event.target.box.classList.toggle('active');
-    }); 
+  textarea = document.getElementsByTagName('textarea')[0];   
+  
+  console.dir(forms);
 
-    document.addEventListener('click', function(e) {
-      console.log(e.clientY, 'clientY');
-      console.log(e.clientX, 'clientX');
+  setInterval(function(){
 
-      box.style.left = e.clientY + 'px';
-      box.style.top = e.clientX + 'px';
+    for (var i = 0, str = ''; i < forms.length; i++) {
+      str += forms[i].value
+    }
 
-    });
-
-
-  }
+    textarea.value = str;
+    
+  }, 1000);}

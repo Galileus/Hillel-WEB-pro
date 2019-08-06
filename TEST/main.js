@@ -1,51 +1,85 @@
 
 
+window.onload = function (){
 
-obj = { X:12, Y:3, znak:'+'};
-foo = { X:33, Y:12, znak:'*'};
+	function sendAjax() {
+	    var	model = { 
+	    	name: 'menu', 
+	    	type: 'row',
+
+	    	items: [ 
+
+	    	{ 	title: 'title 1', 
+	    		handler: 'ActionAdd', 
+
+	    	 },
+
+	    	{ 	title: 'title 2',
+	    		handler: 'ActionSaveAs',
 
 
-function SuperMath (obj){
+	    	 },
 
-	this.check = function(obj){
-		var act = confirm('Wanna make an action with' + ' <' + obj['znak'] + '> ' + '?');
-		if(!act){
-		alert('fuck!');
-		return this.input();
-		}else {
-		alert('let`s do it!')
-		return this.math(obj);
-		}	
+	    	{ 	title: 'title 3',
+	    		handler: 'ActionExit',
+
+
+	    	 }
+	    	] 
+	    };
+
+	    var actions = {
+
+		 	ActionAdd: function() {
+		 		console.log('ActionAdd');
+		 	},
+
+		 	ActionSaveAs: function() {
+		 		console.log('ActionSaveAs');
+		 	},
+
+		 	ActionExit: function() { 
+		 		console.log('ActionExit');
+		 	}
+ 		}
+	    return model;
+	    return actions;
 	}
 
-	this.math = function(obj){
-		if(obj['znak'] === '+'){
-		return obj['X'] + obj['Y'];
-		}else if (obj['znak'] === '-') {
-		return obj['X'] - obj['Y'];
-		}else if (obj['znak'] === '*') {
-		return obj['X'] * obj['Y'];
-		}else if (obj['znak'] === '/') {
-		return obj['X'] / obj['Y'];
-		}else if (obj['znak'] === '%') {
-		return obj['X'] % obj['Y'];
-		}else if (obj['znak'] === '^') {
-		return obj['X'] ^ obj['Y'];
-		}
-	}
 
-	this.input = function (){
-		obj.X = +prompt('Enter number X');
-		obj.Y = +prompt('Enter number Y');
-		obj.znak = prompt('Enter one of the sumbols(+ - / * %)');
-		return res.check(obj);	
-	}
+
+
+
+
+
+    function createMenu(model) {
+    	var ul = document.createElement('ul');
+    	ul.classList.add('menu');
+
+    	console.log(model);
+
+    	for(var i = 0; i < model.items.length; i++){
+
+    		var li = document.createElement('li');
+    		li.classList.add('item');
+    		li.innerHTML = model.items[i].title;
+    		ul.append(li);
+    		var state = null;
+
+            if(model.type == 'column' ) {
+                state = model.type? 'column' : 'row';
+                ul.classList.add('column');
+            }
+
+
+    	}
+    	document.body.append(ul);
+
+
+    var model = sendAjax();    
+
+
+    createMenu (model);
 }
 
-
-var res = new SuperMath (obj);
-var foo2 = new SuperMath (foo);
-
-
-console.log(res.check(obj));
-console.log(foo2.check(foo));
+}

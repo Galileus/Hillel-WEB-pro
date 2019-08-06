@@ -3,6 +3,7 @@
 window.onload = function (){
 
 	function sendAjax() {
+
 	    var	model = { 
 	    	name: 'menu', 
 	    	type: 'row',
@@ -24,8 +25,21 @@ window.onload = function (){
 	    		handler: 'ActionExit',
 
 
-	    	 }
-	    	] 
+	    	 }],
+
+	    	 actions: [{ 
+				ActionAdd: function(){
+					console.log('ActionAdd');
+				},
+
+				ActionSaveAs: function() {
+					console.log('ActionSaveAs');
+				},
+
+				ActionExit: function() { 
+					console.log('ActionExit');
+				}
+	    	 }]
 	    };
 
 	    var actions = {
@@ -43,43 +57,64 @@ window.onload = function (){
 		 	}
  		}
 	    return model;
-	    return actions;
+	    
 	}
 
+	function createMenu(model) {
 
-
-
-
-
-
-    function createMenu(model) {
     	var ul = document.createElement('ul');
     	ul.classList.add('menu');
-
-    	console.log(model);
+    	
 
     	for(var i = 0; i < model.items.length; i++){
-
     		var li = document.createElement('li');
     		li.classList.add('item');
     		li.innerHTML = model.items[i].title;
     		ul.append(li);
-    		var state = null;
-
-            if(model.type == 'column' ) {
-                state = model.type? 'column' : 'row';
-                ul.classList.add('column');
-            }
-
-
     	}
-    	document.body.append(ul);
+        document.body.append(ul);
+
+        var state = null;
+
+        if(model.type == 'column' ) {
+            state = model.type? 'column' : 'row';
+            ul.classList.add('column');
+        }
+
+        
+    }
 
 
-    var model = sendAjax();    
-
-
+    var model = sendAjax();
     createMenu (model);
-}
+
+
+    function setButton (model){
+	    var item = document.querySelectorAll('.item');
+	    console.log(item, 'item'); 
+
+
+	    for(var i = 0; i < item.length;i++ ){
+	    	
+	    	if(model.items[i].handler == 'ActionAdd')
+	    	console.log(model.items[i].handler);
+
+		    item[i].addEventListener('click', function() {
+		        this.classList.toggle('active');        
+
+		    });   
+	    }
+	}
+
+	setButton(model);
+
+	// console.log(model.actions[0].ActionAdd);
+
+	
+
+	
 
 }
+
+
+

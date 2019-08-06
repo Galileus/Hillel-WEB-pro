@@ -1,65 +1,91 @@
-/*window.onload = function(){
-
-  var parents = document.querySelector('.parent, .parentSecond');
-  var div = document.createElement('div');
-
-  div.classList.add('block');
-
-  console.dir(div, 'div');
-
-  console.dir(parents, 'parent');
-
-  parents.appendChald(div);
-
-  for(var i = 0; i < parents.length; i++){
-    va
-  }  
-
-}*/
 
 
-window.onload = function() {
+window.onload = function (){
+
+  function sendAjax() {
+      var model = { 
+        name: 'menu', 
+        type: 'row',
+
+        items: [ 
+
+        {   title: 'title 1', 
+          handler: 'ActionAdd', 
+
+         },
+
+        {   title: 'title 2',
+          handler: 'ActionSaveAs',
 
 
-    function sendAjax() {
+         },
 
-        var	model = { 
-        	name: 'menu', 
-        	type: 'row|column',
+        {   title: 'title 3',
+          handler: 'ActionExit',
 
-        	items: [ 
 
-        	{ title: 'title 1' },
+         }
+        ] 
+      };
 
-        	{ title: 'title 2', },
+      var actions = {
 
-        	{ title: 'title 3', }
+      ActionAdd: function() {
+        console.log('ActionAdd');
+      },
 
-        	] 
-        };	
+      ActionSaveAs: function() {
+        console.log('ActionSaveAs');
+      },
 
-        return model;
+      ActionExit: function() { 
+        console.log('ActionExit');
+      }
+    }
+      return model;
+      return actions;
+  }
 
+  function createMenu(model) {
+
+      var ul = document.createElement('ul');
+      ul.classList.add('menu');
+      
+
+      for(var i = 0; i < model.items.length; i++){
+        var li = document.createElement('li');
+        li.classList.add('item');
+        li.innerHTML = model.items[i].title;
+        ul.append(li);
+      }
+        document.body.append(ul);
+
+        var state = null;
+
+        if(model.type == 'column' ) {
+            state = model.type? 'column' : 'row';
+            ul.classList.add('column');
+        }
     }
 
-    function createMenu(model) {
-    	console.log(model);
-    	var menu = document.createElement('ul');
 
-    	for(var i = 0; i < model.items.length; i++) {
-            var li = document.createElement('li');
-        
-
-		    li.classList.add(model.name + '-item');
-		    li.innerHTML = model.items[i].title;
-		    menu.append(li);  
-		}
-		document.body.append(menu);
-    }
-
-    var foo = sendAjax();
-
-    createMenu(foo);
+    var model = sendAjax();
+    createMenu (model);
 
 
-} 
+    function setButton (model){
+      var item = document.querySelectorAll('.item');
+      console.log(item, 'item'); 
+
+
+      for(var i = 0; i < item.length;i++ ){
+        item[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+        });   
+      }
+  }
+
+  setButton(model);
+
+}
+

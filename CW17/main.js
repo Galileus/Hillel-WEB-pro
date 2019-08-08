@@ -54,8 +54,15 @@ window.onload = function (){
 
       for(var i = 0; i < model.items.length; i++){
         var li = document.createElement('li');
+
+        li.onclick = model.items[i].handler;
+
+
         li.classList.add('item');
         li.innerHTML = model.items[i].title;
+
+        li.onclick = model.items[i].handler;
+
         ul.append(li);
       }
         document.body.append(ul);

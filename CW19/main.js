@@ -1,13 +1,19 @@
 window.onload = function(){
 
 var counter = document.querySelector('.counter');
-var boxes = document.querySelectorAll('.box');	
+var boxes = document.querySelectorAll('.box');
+var res = document.querySelectorAll('.R');
+
+
+/*setInterval(function(){*/
 
 
 counter.innerHTML = localStorage.getItem('counter') || 0;
 
+
 for(var i = 0; i < boxes.length; i++) {
     boxes[i].dataset.id = i ;
+
     boxes[i].querySelector('.counter').innerHTML  =  localStorage.getItem('counter' + boxes[i].dataset.id);
 
     boxes[i].addEventListener('click', function(event) {
@@ -16,6 +22,17 @@ for(var i = 0; i < boxes.length; i++) {
     });
 
 
+    res[i].addEventListener('click', function(){    	
+
+    	localStorage.setItem('counter' + 0, 0);
+    	console.log(i);
+    });
+
+
 }
+
+
+
+    // }, 1000);
 
 }

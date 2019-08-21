@@ -27,7 +27,7 @@ window.onload = function (){
 
          }],
 
-         actions: [{ 
+        actions: [{ 
         ActionAdd: function(){
           console.log('ActionAdd');
         },
@@ -67,17 +67,20 @@ window.onload = function (){
       
 
       for(var i = 0; i < model.items.length; i++){
-        var li = document.createElement('li');
-
-        li.onclick = model.items[i].handler;
+        var li = document.createElement('li');        
 
 
         li.classList.add('item');
         li.innerHTML = model.items[i].title;
-
-        li.onclick = model.items[i].handler;
+        li.onclick = actions[model.items[i].handler];        
 
         ul.append(li);
+
+        li.addEventListener('click', function(){            
+
+
+        })
+
       }
         document.body.append(ul);
 
@@ -87,6 +90,8 @@ window.onload = function (){
             state = model.type? 'column' : 'row';
             ul.classList.add('column');
         }
+
+
 
         
     }

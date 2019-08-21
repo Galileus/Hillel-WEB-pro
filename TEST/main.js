@@ -2,117 +2,41 @@
 
 window.onload = function (){
 
-	function sendAjax() {
+var box = document.querySelectorAll('.box');
 
-	    var	model = { 
-	    	name: 'menu', 
-	    	type: 'row',
+var button = document.querySelector('.button');
 
-	    	items: [ 
+var counter = document.querySelector('.counter');
 
-	    	{ 	title: 'title 1', 
-	    		handler: 'ActionAdd', 
+console.log(box, 'box');
 
-	    	 },
+console.log(button, 'button');
 
-	    	{ 	title: 'title 2',
-	    		handler: 'ActionSaveAs',
+console.log(counter, 'counter');
 
 
-	    	 },
+counter = +counter.innerHTML;
 
-	    	{ 	title: 'title 3',
-	    		handler: 'ActionExit',
-
-
-	    	 }],
-
-	    	 actions: [{ 
-				ActionAdd: function(){
-					console.log('ActionAdd');
-				},
-
-				ActionSaveAs: function() {
-					console.log('ActionSaveAs');
-				},
-
-				ActionExit: function() { 
-					console.log('ActionExit');
-				}
-	    	 }]
-	    };
-
-	    var actions = {
-
-		 	ActionAdd: function() {
-		 		console.log('ActionAdd');
-		 	},
-
-		 	ActionSaveAs: function() {
-		 		console.log('ActionSaveAs');
-		 	},
-
-		 	ActionExit: function() { 
-		 		console.log('ActionExit');
-		 	}
- 		}
-	    return model;
-	    
-	}
-
-	function createMenu(model) {
-
-    	var ul = document.createElement('ul');
-    	ul.classList.add('menu');
-    	
-
-    	for(var i = 0; i < model.items.length; i++){
-    		var li = document.createElement('li');
-    		li.classList.add('item');
-    		li.innerHTML = model.items[i].title;
-    		ul.append(li);
-    	}
-        document.body.append(ul);
-
-        var state = null;
-
-        if(model.type == 'column' ) {
-            state = model.type? 'column' : 'row';
-            ul.classList.add('column');
-        }
-
-        
-    }
+var res = + res;
 
 
-    var model = sendAjax();
-    createMenu (model);
+
+button.addEventListener('click', function(){
+
+for(var i = 0; i < 20; i++){x
+	(function (i){
+		console.log(i);
+
+	})(i);
+}
 
 
-    function setButton (model){
-	    var item = document.querySelectorAll('.item');
-	    console.log(item, 'item'); 
+
+		
+});
 
 
-	    for(var i = 0; i < item.length;i++ ){
-	    	
-	    	if(model.items[i].handler == 'ActionAdd')
-	    	console.log(model.items[i].handler);
 
-		    item[i].addEventListener('click', function() {
-		        this.classList.toggle('active');        
-
-		    });   
-	    }
-	}
-
-	setButton(model);
-
-	// console.log(model.actions[0].ActionAdd);
-
-	
-
-	
 
 }
 
